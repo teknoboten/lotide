@@ -35,4 +35,3 @@ const assertArraysEqual = (arr1, arr2) => {
 };
 
 assertArraysEqual(arrA, arrB);
-
