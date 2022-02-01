@@ -22,22 +22,40 @@ const assertArraysEqual = (arr1, arr2) => {
   }
 };
 
-const letterPositions = () => {
-  const results = {h: [0]};
-  // logic here
+const letterPositions = (string) => {
+  const results = {};
+  //loop through string 
+  //if letter is " ", continue
+  //if letter !exist in result, add a new key and set it to any array of string[index]
+  //if letter exists, push string[index] to result
+  for (let i = 0; i < string.length; i++) {
+    let letter = string[i];
+    if (string[i] === " ") {
+      continue;
+    }
+    if (results[letter]){
+      results[letter].push(i);
+    }
+    if(!results[letter]){
+      let resArr = [i];
+      results[letter] = resArr;
+    } 
+  }
   return results;
 };
 
-let testResult = letterPositions("hello");
+let testResult = letterPositions("oh hello");
 let expectedResult = {
-  h: [0],
-  e: [1],
-  l: [2, 3],
-  o: [4]
+  o: [0, 7],
+  h: [1, 3],
+  e: [4],
+  l: [5, 6]
 };
 
+assertArraysEqual(testResult['o'], expectedResult['o']);
 assertArraysEqual(testResult['h'], expectedResult['h']);
-
+assertArraysEqual(testResult['e'], expectedResult['e']);
+assertArraysEqual(testResult['l'], expectedResult['l']);
 
 
 
