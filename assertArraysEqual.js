@@ -14,18 +14,6 @@ const eqArrays = (arr1, arr2) => {
   return result;
 };
 
-//test arrays
-let arrA = ["david", "moira", "alexis", "johnny"];
-let arrB = ["david", "moira", "alexis", "johnny"];
-// let arrC = ["moira", "alexis", "johnny"];
-// let arrD = [];
-// let arrE = ["stevie", "patrick", "twyla", "jocelyn"];
-
-/*
-inputs: two arrays || desired outputs: appropriate message logged to console
-goal: make use of your eqArrays function for array comparison.
-*/
-
 const assertArraysEqual = (arr1, arr2) => {
   if (eqArrays(arr1, arr2)) {
     console.log("these arrays match!");
@@ -34,4 +22,16 @@ const assertArraysEqual = (arr1, arr2) => {
   }
 };
 
-assertArraysEqual(arrA, arrB);
+// test arrays
+let arrA = ["david", "moira", "alexis", "johnny"];
+let arrB = ["david", "moira", "alexis", "johnny"];
+let arrC = ["moira", "alexis", "johnny"];
+let arrD = [];
+let arrE = ["stevie", "patrick", "twyla", "jocelyn"];
+
+assertArraysEqual(arrD, arrD);
+
+/*
+inputs: two arrays || desired outputs: appropriate message logged to console
+goal: make use of your eqArrays function for array comparison.
+*/
