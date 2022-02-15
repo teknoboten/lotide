@@ -29,7 +29,7 @@ let arrC = ["moira", "alexis", "johnny"];
 let arrD = [];
 let arrE = ["stevie", "patrick", "twyla", "jocelyn"];
 
-assertArraysEqual(arrD, arrD);
+assertArraysEqual(arrA, arrB);
 
 /*
 inputs: two arrays || desired outputs: appropriate message logged to console
