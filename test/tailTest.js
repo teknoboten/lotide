@@ -1,18 +1,16 @@
 const tail = require('../tail');
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 
-
-//testing tail
-console.log(`\ntesting tail:\n`);
-
-const roseFam = ["david", "moira", "alexis", "johnny"];
-const result = tail(roseFam);
-const expected = ["moira", "alexis", "johnny"];
-
-const checkResult = (res, ex) => {
-  for (let i = 0; i < res.length; i++) {
-    assertEqual(res[i], ex[i]);
-  }
-};
-
-checkResult(result, expected);
+describe('#tail', () => {
+  it("returns ['moira', 'alexis', 'johnny'] for ['david', 'moira', 'alexis', 'johnny']", () => {
+    assert.deepEqual(tail(['david', 'moira', 'alexis', 'johnny']), ['moira', 'alexis', 'johnny']);
+  });
+  it("returns undefined for []", () => {
+    assert.deepEqual(tail([]), []);
+  });
+  it("does not modify the original array", () => {
+    const inputArray = ["david", "moira", "alexis", "johnny"];
+    tail(inputArray);
+    assert.deepEqual(inputArray, ["david", "moira", "alexis", "johnny"]);
+  });
+});
