@@ -5,7 +5,6 @@ const without = (source, itemsToRemove) => {
     let count = 0;  //set which item in itemsToRemove we are checking
     let isIncluded = false;
     while (count < itemsToRemove.length) {
-      // console.log(`checking: ${itemsToRemove[count]}`);
       if (el === itemsToRemove[count]) {
         isIncluded = true;
       }
