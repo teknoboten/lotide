@@ -1,30 +1,7 @@
-const eqArrays = (arr1, arr2) => {
-  //loop through arrays to check each el matches
-  let result = false;
-  let count = 0;
-  for (const x of arr1) {
-    if (x !== arr2[count]) {
-      result = false;
-      return result;
-    } else {
-      result = true;
-      count += 1;
-    }
-  }
-  return result;
-};
-
-const assertArraysEqual = (arr1, arr2) => {
-  if (eqArrays(arr1, arr2)) {
-    console.log("these arrays match!");
-  } else {
-    console.log("not a match!");
-  }
-};
 
 const letterPositions = (string) => {
   const results = {};
-  //loop through string 
+  //loop through string
   //if letter is " ", continue
   //if letter !exist in result, add a new key and set it to any array of string[index]
   //if letter exists, push string[index] to result
@@ -33,29 +10,18 @@ const letterPositions = (string) => {
     if (string[i] === " ") {
       continue;
     }
-    if (results[letter]){
+    if (results[letter]) {
       results[letter].push(i);
     }
-    if(!results[letter]){
+    if (!results[letter]) {
       let resArr = [i];
       results[letter] = resArr;
-    } 
+    }
   }
   return results;
 };
 
-let testResult = letterPositions("oh hello");
-let expectedResult = {
-  o: [0, 7],
-  h: [1, 3],
-  e: [4],
-  l: [5, 6]
-};
-
-assertArraysEqual(testResult['o'], expectedResult['o']);
-assertArraysEqual(testResult['h'], expectedResult['h']);
-assertArraysEqual(testResult['e'], expectedResult['e']);
-assertArraysEqual(testResult['l'], expectedResult['l']);
+module.exports = letterPositions;
 
 
 
@@ -75,9 +41,9 @@ assertArraysEqual(testResult['l'], expectedResult['l']);
 
 
 
-/* 
-let expectedResult = 
-{ 
+/*
+let expectedResult =
+{
   l: [0],
   i: [1, 11],
   g: [2],
