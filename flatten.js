@@ -1,29 +1,6 @@
-// const eqArrays = (arr1, arr2) => {
-//   let result = false;
-//   let count = 0;
-//   for (const x of arr1) {
-//     if (x !== arr2[count]) {
-//       result = false;
-//       return result;
-//     } else {
-//       result = true;
-//       count += 1;
-//     }
-//   }
-//   return result;
-// };
-
-// const assertArraysEqual = (arr1, arr2) => {
-//   if (eqArrays(arr1, arr2)) {
-//     console.log("these arrays match!");
-//   } else {
-//     console.log("not a match!");
-//   }
-// };
-
 const flatten = (arr) => {
   let flattened = [];
-  //loop through the outer array
+
   for (const el of arr) {
     if (!Array.isArray(el)) { //check if the element is not an array
       flattened.push(el);   //if not an array, push to result
