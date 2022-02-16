@@ -1,7 +1,6 @@
 const assertArraysEqual = require('../assertArraysEqual');
 const middle = require('../middle');
 
-
 console.log(`testing middle:\n`);
 
 //test arrays
