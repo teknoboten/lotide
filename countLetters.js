@@ -1,8 +1,11 @@
 const countLetters = (sentence) => {
-  const skip = {" ": true, "!": true, "?": true};
-  let result = {};
+//takes in a string
 
-  for (const letter of sentence) {
+  const skip = {" ": true, "!": true, "?": true}; //define characters that should *not* be counted
+  let result = {};  //accumulator
+
+  for (const letter of sentence) {  // loop through provided string
+
     if (skip[letter]) {
       continue;
     }
@@ -13,7 +16,7 @@ const countLetters = (sentence) => {
       result[letter] = 1;
     }
   }
-  console.log(result);
+  
   return result;
 };
 

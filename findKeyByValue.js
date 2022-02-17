@@ -1,19 +1,13 @@
 const findKeyByValue = (object, string) => {
-  let isFound = false;
-  //loop through object keys
-  for (const k in object) {
-    // console.log(k); //<- returns the key
-    // console.log(object[k]); //<- returns the value
-    if (k === string) {
-      isFound = true;
-      return object[k];
+//takes in an object and a string to search for
+
+  for (const k in object) {       //interate over object keys
+    if (object[k] === string) {   //if k.value === string, return k (the key)
+      return k;
     }
   }
-  //if key === string, return it
-  //if no keys match, return an error
-  if (!isFound) {
-    return undefined;
-  }
+  return undefined;               //if the key is not found, return undefined
+
 };
 
 module.exports = findKeyByValue;

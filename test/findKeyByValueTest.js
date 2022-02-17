@@ -9,6 +9,7 @@ const availableStores = {
 };
 
 //test cases
-assertEqual(findKeyByValue(availableStores, "fashion"), "blouse barn");
-assertEqual(findKeyByValue(availableStores, "bar"), "the wobbly elm");
-assertEqual(findKeyByValue(availableStores, "the nook"), undefined);
+
+assertEqual(findKeyByValue(availableStores, "blouse barn"), "fashion");
+assertEqual(findKeyByValue(availableStores, "the wobbly elm"), "bar");
+assertEqual(findKeyByValue(availableStores, ""), undefined);

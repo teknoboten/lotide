@@ -1,7 +1,6 @@
 const assertArraysEqual = require('../assertArraysEqual');
 const assertEqual = require('../assertEqual');
 
-
 // test arrays
 console.log(`testing assertArraysEqual:\n`);
 

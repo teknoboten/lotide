@@ -1,17 +1,23 @@
-// const assert = require('chai').assert;
-const assertEqual = require('../assertEqual');
 const countLetters = require('../countLetters');
+const assertObjectsEqual = require('../assertObjectsEqual');
 
 const message = "best wishes!";
-const counted = countLetters(message);
 
-assertEqual(counted['b'], 1);
-assertEqual(counted['e'], 2);
-assertEqual(counted['s'], 3);
-assertEqual(counted['t'], 1);
-assertEqual(counted['w'], 1);
-assertEqual(counted['i'], 1);
-assertEqual(counted['h'], 1);
+const actual = countLetters(message);
+const expected = {
+  b: 1,
+  e: 2,
+  s: 3,
+  t: 1,
+  w: 1,
+  i: 1,
+  h: 1
+};
 
+console.log(`testing countLetters`);
 
+console.log(`string provided:`);
+assertObjectsEqual(actual, expected);
 
+console.log(`empty string provided:`)
+assertObjectsEqual(countLetters(""), "");

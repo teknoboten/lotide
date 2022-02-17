@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@teknoboten/lotide",
   "version": "1.0.0",
   "description": "a very cool clone of lodash",
   "main": "assertArraysEqual.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/teknoboten/lotide.git"
   },
-  "author": "",
+  "author": "serra boten",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/teknoboten/lotide/issues"
