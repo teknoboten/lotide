@@ -1,4 +1,6 @@
 const head = (arr) => {
+//returns first element of an array
+
   if (!arr){
     return undefined;
   } 

@@ -1,15 +1,17 @@
-const assertArraysEqual = require('../assertArraysEqual');
 const letterPositions = require('../letterPositions');
+const assertObejectsEqual = require('../assertObjectsEqual');
 
-let testResult = letterPositions("oh hello");
-let expectedResult = {
+
+const empty = letterPositions("");
+const testResult = letterPositions("oh hello");
+const expectedResult = {
   o: [0, 7],
   h: [1, 3],
   e: [4],
   l: [5, 6]
 };
 
-assertArraysEqual(testResult['o'], expectedResult['o']);
-assertArraysEqual(testResult['h'], expectedResult['h']);
-assertArraysEqual(testResult['e'], expectedResult['e']);
-assertArraysEqual(testResult['l'], expectedResult['l']);
+
+console.log(`testing letter positions:`)
+assertObejectsEqual(testResult, expectedResult);
+assertObejectsEqual(empty, "");
